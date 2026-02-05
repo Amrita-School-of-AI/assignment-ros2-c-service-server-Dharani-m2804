@@ -14,11 +14,9 @@ public:
         : Node("add_two_ints_server")
     {
         service_ = this->create_service<example_interfaces::srv::AddTwoInts>(
-            "add_two_ints",
+            "/add_two_ints",
             std::bind(&AddTwoIntsServer::add, this, _1, _2)
         );
-
-        RCLCPP_INFO(this->get_logger(), "Add Two Ints Service Server is ready.");
     }
 
 private:
