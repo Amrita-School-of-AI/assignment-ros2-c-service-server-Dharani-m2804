@@ -26,11 +26,15 @@ private:
         const std::shared_ptr<example_interfaces::srv::AddTwoInts::Request> request,
         std::shared_ptr<example_interfaces::srv::AddTwoInts::Response> response)
     {
+        RCLCPP_INFO(this->get_logger(),
+                    "Incoming request: a=%ld, b=%ld",
+                    request->a, request->b);
+
         response->sum = request->a + request->b;
 
         RCLCPP_INFO(this->get_logger(),
-                    "Request: a=%ld b=%ld | Response: sum=%ld",
-                    request->a, request->b, response->sum);
+                    "Sending response: sum=%ld",
+                    response->sum);
     }
 
     rclcpp::Service<example_interfaces::srv::AddTwoInts>::SharedPtr service_;
