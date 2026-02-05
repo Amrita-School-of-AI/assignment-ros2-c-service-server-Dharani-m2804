@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <package format="3">
-  <name>assignment-ros2-c-service-server-Dharani-m2804</name>
+<name>ros2_service_server</name>
+
   <version>0.0.0</version>
   <description>ROS2 C++ service server assignment</description>
 
